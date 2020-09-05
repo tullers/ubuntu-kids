@@ -1,0 +1,22 @@
+#Kids specific stuff
+- name: Install Kids stuff
+  apt:
+    pkg:
+    - supertux
+    - gcompris
+    - tuxpaint
+    - tuxmath
+
+- name: add kids users and group
+  group:
+    name: kids
+- name: add alfie  
+  user:
+    name: alfie
+    group: kids
+    append: yes
+- name: add fraser
+  user:
+    name: fraser
+    group: kids
+    append: yes
